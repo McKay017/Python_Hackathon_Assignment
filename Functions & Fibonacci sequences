@@ -1,0 +1,23 @@
+def fibonacci_sequence(n):
+    # Initialize the first two terms of the Fibonacci sequence
+    fibonacci_series = [0, 1]
+
+    # Generate the Fibonacci sequence up to the specified term n
+    for i in range(2, n):
+        next_term = fibonacci_series[-1] + fibonacci_series[-2]
+        fibonacci_series.append(next_term)
+
+    return fibonacci_series
+
+def main():
+    # Get the number of terms for the Fibonacci sequence from the user
+    n = int(input("Enter the number of terms for the Fibonacci sequence: "))
+
+    # Generate the Fibonacci sequence
+    fibonacci_series = fibonacci_sequence(n)
+
+    # Print the Fibonacci sequence
+    print("Fibonacci sequence up to term", n, ":", fibonacci_series)
+
+if __name__ == "__main__":
+    main()
